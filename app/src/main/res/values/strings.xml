@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Abhishek Kumar</string>
+    <string name="title_home_screen">Add BMI Details</string>
+    <string name="personal_text">Enter Personal Detail</string>
+    <string name="text_weight">Weight</string>
+    <string name="text_height">Height</string>
+    <string name="text_gender">Gender</string>
+    <string name="instruction_text">Calculate Your Body Mass Index</string>
+    <string name="interstitialTestUnitId">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="very_severely_underweight">Severely Underweight</string>
+    <string name="severely_underweight">Severely Underweight</string>
+    <string name="underweight">Underweight</string>
+    <string name="normal">Normal</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese_class_i">Obese Class</string>
+    <string name="body_index">Body Mass Index</string>
+    <string name="normalRangeText">Normal BMI Range: 18.5kg/m<sup><small>2 </small></sup> - 25kg/m<sup><small>2 </small></sup></string>
+    <string name="underWeightRangeText">Normal BMI Range: 18.5kg/m<sup><small>2 </small></sup> - 25kg/m<sup><small>2 </small></sup></string>
+    <string name="ponderalIndexText">Ponderal Index: 10.64kg/m<sup><small>3 </small></sup></string>
+    <string name="dummyCalculationText">Hello Nitin, You are Normal</string>
+    <string name="obese_class_ii">Obese Class II</string>
+    <string name="obese_class_iii">Obese Class III</string>
+    <string name="title_result_screen">BMI Details</string>
+    <string name="bannerTestUnitId">ca-app-pub-3940256099942544/6300978111</string>
+</resources>

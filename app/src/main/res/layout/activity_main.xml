@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/toolbar_bg">
+
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/back"
+                android:layout_marginLeft="@dimen/margin10"
+                android:src="@drawable/back">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/title_home_screen"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text18" />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="@dimen/margin25"
+        android:layout_marginTop="@dimen/margin30"
+        android:layout_marginRight="@dimen/margin20"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personal_text"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text22" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_height"
+            android:layout_marginTop="@dimen/margin20"
+            android:padding="@dimen/margin10"
+            android:inputType="textCapWords"
+            android:id="@+id/name"
+            android:hint="Name"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:background="@drawable/edit_text_bg">
+
+        </EditText>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/numberPicker"
+        android:layout_marginLeft="@dimen/margin30"
+        android:layout_marginRight="@dimen/margin30"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin20"
+            android:text="@string/instruction_text"
+            android:textSize="@dimen/text18">
+
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/headings_of_pickers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_weight"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text16">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/black"
+                android:text="@string/text_height"
+
+                android:textSize="@dimen/text16">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+
+                android:layout_alignParentRight="true"
+                android:text="@string/text_gender"
+                android:textSize="@dimen/text16">
+
+            </TextView>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/numberPicker"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_above="@id/calculateButton"
+        android:layout_marginLeft="@dimen/margin20"
+        android:layout_marginRight="@dimen/margin20"
+        android:layout_marginBottom="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin10"
+        app:cardElevation="@dimen/margin10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin10">
+
+            <NumberPicker
+                android:id="@+id/weightPicker"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:showDividers="none"
+                android:theme="@style/AppTheme.">
+
+            </NumberPicker>
+
+            <NumberPicker
+                android:id="@+id/heightPicker"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:theme="@style/AppTheme.">
+
+            </NumberPicker>
+
+            <NumberPicker
+                android:id="@+id/genderPicker"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+
+                android:layout_alignParentRight="true"
+                android:theme="@style/AppTheme.">
+
+            </NumberPicker>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/adView"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin30"
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_marginRight="@dimen/margin30"
+        android:layout_marginBottom="@dimen/margin20"
+        android:background="@drawable/button_bg"
+        android:text="Calculate"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text18">
+
+    </Button>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="@string/bannerTestUnitId">
+
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>

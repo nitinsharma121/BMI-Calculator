@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="iconSize">24dp</dimen>
+    <dimen name="margin10">10dp</dimen>
+    <dimen name="text14">14sp</dimen>
+    <dimen name="text16">16sp</dimen>
+    <dimen name="text18">18sp</dimen>
+    <dimen name="margin20">20dp</dimen>
+    <dimen name="text22">22sp</dimen>
+    <dimen name="margin30">30dp</dimen>
+    <dimen name="edit_text_height">45dp</dimen>
+    <dimen name="margin50">50dp</dimen>
+    <dimen name="margin100">100dp</dimen>
+    <dimen name="margin5">5dp</dimen>
+    <dimen name="margin25">25dp</dimen>
+</resources>

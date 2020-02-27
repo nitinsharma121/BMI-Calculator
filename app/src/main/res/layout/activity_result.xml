@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ResultActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/toolbar_bg">
+
+            <ImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:id="@+id/backResult"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin10"
+                android:src="@drawable/back">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/title_result_screen"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text18" />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_above="@id/adView"
+        android:layout_below="@id/toolbar"
+        app:cardCornerRadius="@dimen/margin10"
+        android:layout_margin="@dimen/margin30"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/viewAbove"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin30"
+                android:background="@color/lightgrey">
+
+            </View>
+
+            <TextView
+                android:id="@+id/massText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewAbove"
+                android:layout_marginTop="@dimen/margin10"
+                android:gravity="center"
+                android:text="@string/body_index"
+                android:textAllCaps="true"
+                android:textColor="@color/lightgrey">
+
+            </TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/viewBelow"
+                android:layout_below="@id/massText"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/lightgrey">
+
+            </View>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin20"
+                android:layout_alignParentBottom="true"
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/rate"
+                    android:src="@drawable/rate" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/share"
+                    android:id="@+id/share"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="160dp"
+                android:text="72.45"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:layout_below="@id/viewBelow"
+                android:id="@+id/calculationNumber"
+                android:layout_marginTop="@dimen/margin20"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content">
+
+
+            </TextView>
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/viewBelowCalculation"
+                android:layout_below="@id/calculationNumber"
+                android:layout_marginTop="@dimen/margin5"
+                android:background="@android:color/white">
+
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/calculationText"
+                android:layout_marginTop="@dimen/margin50"
+                android:layout_centerHorizontal="true"
+                android:text="@string/dummyCalculationText"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_below="@id/calculationNumber"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/normalRangeText"
+                android:layout_marginTop="@dimen/margin10"
+                android:textColor="@android:color/white"
+                android:text="@string/normalRangeText"
+                android:layout_below="@id/calculationText"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/ponderalIndexText"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:text="@string/ponderalIndexText"
+                android:layout_below="@id/normalRangeText"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="@string/bannerTestUnitId">
+
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>
